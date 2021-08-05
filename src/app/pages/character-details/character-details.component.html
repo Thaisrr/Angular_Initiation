@@ -1,0 +1,17 @@
+<h2>Mon personnage : </h2>
+
+<!-- ne se charge que quand et si character est différent de undefined -->
+<div *ngIf="character && !isLoading">
+  <p>Nom : {{ character.name }}</p>
+  <p>XP : {{ character.xp }} </p>
+  <p>PV : {{ character.pv }} </p>
+</div>
+
+<div *ngIf="!character && !isLoading">
+  <p>Pas de personnage trouvé</p>
+</div>
+
+<div *ngIf="isLoading">
+  <p>chargement....</p>
+</div>
+
