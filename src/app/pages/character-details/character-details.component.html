@@ -5,6 +5,14 @@
   <p>Nom : {{ character.name }}</p>
   <p>XP : {{ character.xp }} </p>
   <p>PV : {{ character.pv }} </p>
+  <p *ngIf="character.bag">Possède un sac {{character.bag.color}}, de capacité : {{character.bag.capacity}}</p>
+  <ul *ngIf="character.jobs && character.jobs.length > 0">
+    <li *ngFor="let job of character.jobs">{{job.name}}, defense : {{job.defense}}</li>
+  </ul>
+
+  <p>
+    <button (click)="delete()">Supprimer ce personnage</button>
+  </p>
 </div>
 
 <div *ngIf="!character && !isLoading">
