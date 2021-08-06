@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../../tools/classes/User';
-import {AuthService} from "../../services/auth.service";
-import {catchError} from "rxjs/operators";
-import {of} from "rxjs";
-import {Router} from "@angular/router";
+import {AuthService} from '../../services/auth.service';
+import {catchError} from 'rxjs/operators';
+import {of} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',

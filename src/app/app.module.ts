@@ -11,6 +11,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import {ApiInterceptor} from './tools/interceptors/api.interceptor';
 import { NavComponent } from './components/nav/nav.component';
+import {UserGuard} from "./tools/guards/user.guard";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NavComponent } from './components/nav/nav.component';
     ReactiveFormsModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true},
+    UserGuard
   ],
   bootstrap: [AppComponent]
 })
