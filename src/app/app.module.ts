@@ -10,6 +10,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import {ApiInterceptor} from './tools/interceptors/api.interceptor';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {ApiInterceptor} from './tools/interceptors/api.interceptor';
     CharacterDetailsComponent,
     CharactersListComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

@@ -41,9 +41,7 @@ export class AuthService {
   }
 
   disconnect(): void {
-    localStorage.clear();
-    this.router.navigate(['/login'])
-      .then(_ => alert('Vous êtes déconnecté.e'));
+    window.location.href = '/login';
   }
 
 }

@@ -29,8 +29,7 @@ export class LoginComponent implements OnInit {
       })
     ).subscribe(data => {
       if (data) {
-        this.router.navigate(['/characters'])
-          .then(_ => alert('Bienvenue'));
+        window.location.href = '/characters';
       }
     });
   }
